@@ -35,6 +35,9 @@ export default function Header() {
         </Link>
 
         <nav className={`${styles.nav} ${menuOpen ? styles.navOpen : ''}`}>
+          <button className={styles.mobileCloseBtn} onClick={() => setMenuOpen(false)} aria-label="Close menu">
+            ✕
+          </button>
           {navLinks.map((link) => (
             <Link key={link.label} href={link.href} className={styles.navLink} onClick={() => setMenuOpen(false)}>
               {link.label}

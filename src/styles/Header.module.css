@@ -75,6 +75,10 @@
   width: 26px;
   padding: 3px;
 }
+
+.mobileCloseBtn {
+  display: none;
+}
 .menuBtn span {
   display: block;
   height: 1.5px;
@@ -103,4 +107,25 @@
   .navOpen { transform: translateX(0); }
   .navLink { font-size: 1.3rem; font-weight: 700; color: #fff; }
   .navCta { font-size: 1rem; }
+  
+  .mobileCloseBtn {
+    position: absolute;
+    top: 1.5rem;
+    right: 2rem;
+    background: rgba(255, 255, 255, 0.1);
+    border: none;
+    color: #fff;
+    font-size: 1.5rem;
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    cursor: pointer;
+    transition: background 0.2s;
+  }
+  .mobileCloseBtn:hover {
+    background: rgba(255, 255, 255, 0.2);
+  }
 }

@@ -1,11 +1,16 @@
 'use client';
-import { useEffect, useRef } from 'react';
+import { useEffect, useRef, useState } from 'react';
 
 export default function CustomCursor() {
   const dotRef = useRef(null);
   const ringRef = useRef(null);
+  const [isVisible, setIsVisible] = useState(false);
 
   useEffect(() => {
+    if (window.matchMedia('(pointer: coarse)').matches || window.innerWidth <= 768) {
+      return;
+    }
+    setIsVisible(true);
     let raf;
     let mx = -100, my = -100, rx = -100, ry = -100;
 
@@ -35,6 +40,8 @@ export default function CustomCursor() {
 
     return () => { cancelAnimationFrame(raf); window.removeEventListener('mousemove', onMove); };
   }, []);
+
+  if (!isVisible) return null;
 
   return (
     <>
