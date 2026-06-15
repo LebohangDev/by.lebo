@@ -108,7 +108,7 @@ export default function BentoGrid() {
             <div className={styles.photoInner}>
               <div className={styles.photoPlaceholder} style={{ position: 'relative', width: '100%', height: '100%' }}>
                 <Image 
-                  src="/by.lebo/images/lebo/lebo.png"
+                  src="/by.lebo/images/Lebo/lebo.png"
                   alt="Lebohang Khasipe"
                   fill
                   style={{ objectFit: 'cover' }}
