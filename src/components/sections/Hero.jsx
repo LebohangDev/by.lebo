@@ -50,8 +50,8 @@ export default function Hero() {
                    <span className={styles.floatDot}></span>
                  </div>
                  <p className={styles.floatDesc}>
-                   MSc Cloud Computing & Full-Stack Builder. Engineering scalable systems with a ruthless focus on execution and aesthetics.
-                 </p>
+                  MSc Networking & Cloud Computing and Full Stack Developer. Engineering scalable systems with a ruthless focus on execution and aesthetics.
+                </p>
                  <div className={styles.floatLine} />
                  <span className={styles.floatSub}>FOCUS · EXECUTE · ELEVATE</span>
               </div>
