@@ -211,7 +211,7 @@
 }
 
 .deviceImg {
-  object-fit: contain;
+  object-fit: fill;
   object-position: top center;
 }
 
