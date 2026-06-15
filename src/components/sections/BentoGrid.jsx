@@ -5,20 +5,20 @@ import Image from 'next/image';
 import styles from '../../styles/BentoGrid.module.css';
 
 const lifestyleImages = [
-  '/images/lifestyle/IMG_1044.png',
-  '/images/lifestyle/IMG_1045.png',
-  '/images/lifestyle/IMG_1047.jpeg',
-  '/images/lifestyle/IMG_1048.jpeg',
-  '/images/lifestyle/IMG_1049.jpeg',
-  '/images/lifestyle/IMG_1050.jpeg',
+  '/by.lebo/images/lifestyle/IMG_1044.png',
+  '/by.lebo/images/lifestyle/IMG_1045.png',
+  '/by.lebo/images/lifestyle/IMG_1047.jpeg',
+  '/by.lebo/images/lifestyle/IMG_1048.jpeg',
+  '/by.lebo/images/lifestyle/IMG_1049.jpeg',
+  '/by.lebo/images/lifestyle/IMG_1050.jpeg',
 ];
 
 const blueLockImages = [
-  '/images/bluelock/download.png',
-  '/images/bluelock/download (1).png',
-  '/images/bluelock/a45c6b96e359cca845d6935c35b7eabc.jpg',
-  '/images/bluelock/cdade89f45f67a64e2a6bf019b06cce2.jpg',
-  '/images/bluelock/a57fd0497e1661c5268fb5e72ec16370.jpg',
+  '/by.lebo/images/bluelock/download.png',
+  '/by.lebo/images/bluelock/download (1).png',
+  '/by.lebo/images/bluelock/a45c6b96e359cca845d6935c35b7eabc.jpg',
+  '/by.lebo/images/bluelock/cdade89f45f67a64e2a6bf019b06cce2.jpg',
+  '/by.lebo/images/bluelock/a57fd0497e1661c5268fb5e72ec16370.jpg',
 ];
 
 function BentoCard({ children, className = '', delay = 0 }) {
@@ -108,7 +108,7 @@ export default function BentoGrid() {
             <div className={styles.photoInner}>
               <div className={styles.photoPlaceholder} style={{ position: 'relative', width: '100%', height: '100%' }}>
                 <Image 
-                  src="/images/lebo/ChatGPT Image Jun 15, 2026, 05_28_31 PM.png"
+                  src="/by.lebo/images/lebo/ChatGPT Image Jun 15, 2026, 05_28_31 PM.png"
                   alt="Lebohang Khasipe"
                   fill
                   style={{ objectFit: 'cover' }}

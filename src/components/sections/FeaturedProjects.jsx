@@ -5,19 +5,19 @@ import { motion, useInView } from 'framer-motion';
 import styles from '../../styles/FeaturedProjects.module.css';
 
 const parkflowImages = [
-  '/images/project/IMG_7400.png',
-  '/images/project/IMG_7401.png',
-  '/images/project/IMG_7403.png',
-  '/images/project/IMG_7405.png',
-  '/images/project/IMG_7406.png',
-  '/images/project/IMG_7998.png',
+  '/by.lebo/images/project/IMG_7400.png',
+  '/by.lebo/images/project/IMG_7401.png',
+  '/by.lebo/images/project/IMG_7403.png',
+  '/by.lebo/images/project/IMG_7405.png',
+  '/by.lebo/images/project/IMG_7406.png',
+  '/by.lebo/images/project/IMG_7998.png',
 ];
 
 const parkflowMvpImages = [
-  '/images/project/mvp/Opera Snapshot_2026-06-15_163205_Final20UG.docx.pdf.png',
-  '/images/project/mvp/Opera Snapshot_2026-06-15_163230_Final20UG.docx.pdf.png',
-  '/images/project/mvp/Opera Snapshot_2026-06-15_163252_Final20UG.docx.pdf.png',
-  '/images/project/mvp/Opera Snapshot_2026-06-15_163309_Final20UG.docx.pdf.png',
+  '/by.lebo/images/project/mvp/Opera Snapshot_2026-06-15_163205_Final20UG.docx.pdf.png',
+  '/by.lebo/images/project/mvp/Opera Snapshot_2026-06-15_163230_Final20UG.docx.pdf.png',
+  '/by.lebo/images/project/mvp/Opera Snapshot_2026-06-15_163252_Final20UG.docx.pdf.png',
+  '/by.lebo/images/project/mvp/Opera Snapshot_2026-06-15_163309_Final20UG.docx.pdf.png',
 ];
 
 function StackedMockups({ images }) {
@@ -119,7 +119,7 @@ function CreatorsBlueprintCard() {
           <div className={styles.laptopScreen}>
             <div className={styles.laptopDisplay}>
               <Image
-                src="/images/project/saas/dashbaord.png"
+                src="/by.lebo/images/project/saas/dashbaord.png"
                 alt="Creators Blueprint Dashboard"
                 fill
                 unoptimized={true}
@@ -137,7 +137,7 @@ function CreatorsBlueprintCard() {
           <div className={styles.iphoneNotch}></div>
           <div className={styles.iphoneScreen}>
              <Image 
-               src="/images/project/saas/Opera Snapshot_2026-06-15_153759_saas_non_technical_guide.pdf.png"
+               src="/by.lebo/images/project/saas/Opera Snapshot_2026-06-15_153759_saas_non_technical_guide.pdf.png"
                alt="Creators Blueprint Mobile"
                fill
                unoptimized={true}
