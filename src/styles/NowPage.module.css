@@ -1,0 +1,143 @@
+.section {
+  background: var(--midnight);
+  padding: var(--space-2xl) 0;
+}
+
+.inner {
+  max-width: 900px;
+  margin: 0 auto;
+  padding: 0 2rem;
+}
+
+.header { margin-bottom: 4rem; }
+
+.sectionLabel {
+  display: block;
+  font-family: var(--font-mono);
+  font-size: 0.8rem;
+  color: var(--electric);
+  letter-spacing: 0.1em;
+  margin-bottom: 1.5rem;
+}
+
+.headline {
+  font-size: clamp(2.5rem, 5vw, 4.5rem);
+  font-weight: 800;
+  letter-spacing: -0.04em;
+  line-height: 1.05;
+  color: var(--cream);
+  margin-bottom: 0.5rem;
+}
+
+.accent { color: var(--butter); }
+
+.sub {
+  font-family: var(--font-mono);
+  font-size: 0.75rem;
+  color: var(--ice-dim);
+  letter-spacing: 0.08em;
+}
+
+/* Spotify-style dark card */
+.card {
+  background: #0d1117;
+  border: 1px solid rgba(48, 113, 247, 0.12);
+  border-radius: var(--radius-lg);
+  overflow: hidden;
+  box-shadow: 0 32px 80px rgba(0, 0, 0, 0.4);
+}
+
+.cardHeader {
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+  padding: 1.2rem 2rem;
+  background: rgba(7, 15, 46, 0.6);
+  border-bottom: 1px solid rgba(48, 113, 247, 0.08);
+}
+
+/* Music bars animation */
+.spotifyBar {
+  display: flex;
+  align-items: flex-end;
+  gap: 2px;
+  height: 16px;
+}
+
+.bar {
+  width: 3px;
+  background: var(--electric);
+  border-radius: 2px;
+  animation: bounce 1s ease-in-out infinite;
+}
+.bar:nth-child(1) { height: 40%; animation-delay: 0s; }
+.bar:nth-child(2) { height: 80%; animation-delay: 0.1s; }
+.bar:nth-child(3) { height: 100%; animation-delay: 0.2s; }
+.bar:nth-child(4) { height: 60%; animation-delay: 0.3s; }
+.bar:nth-child(5) { height: 30%; animation-delay: 0.4s; }
+
+@keyframes bounce {
+  0%, 100% { transform: scaleY(0.4); }
+  50% { transform: scaleY(1); }
+}
+
+.nowLabel {
+  font-family: var(--font-mono);
+  font-size: 0.7rem;
+  color: var(--ice-dim);
+  letter-spacing: 0.1em;
+  text-transform: uppercase;
+}
+
+/* Items */
+.items {
+  padding: 0;
+}
+
+.item {
+  display: flex;
+  align-items: flex-start;
+  gap: 1.5rem;
+  padding: 1.8rem 2rem;
+  border-bottom: 1px solid rgba(48, 113, 247, 0.06);
+  transition: background 0.2s;
+}
+.item:last-child { border-bottom: none; }
+.item:hover { background: rgba(48, 113, 247, 0.03); }
+
+.itemIcon {
+  font-size: 1.6rem;
+  margin-top: 0.1rem;
+  flex-shrink: 0;
+}
+
+.itemText {
+  display: flex;
+  flex-direction: column;
+  gap: 0.2rem;
+}
+
+.itemCategory {
+  font-family: var(--font-mono);
+  font-size: 0.7rem;
+  color: var(--electric);
+  letter-spacing: 0.1em;
+  text-transform: uppercase;
+}
+
+.itemValue {
+  font-size: 1.1rem;
+  font-weight: 700;
+  color: var(--cream);
+  letter-spacing: -0.01em;
+}
+
+.itemSub {
+  font-size: 0.82rem;
+  color: var(--ice-dim);
+}
+
+@media (max-width: 480px) {
+  .item { padding: 1.5rem; gap: 1rem; }
+  .card { border-radius: var(--radius-md); }
+}

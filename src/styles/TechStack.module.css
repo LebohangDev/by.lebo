@@ -1,0 +1,103 @@
+.section {
+  background: var(--midnight-deep);
+  padding: var(--space-2xl) 0;
+}
+
+.inner {
+  max-width: 1280px;
+  margin: 0 auto;
+  padding: 0 2rem;
+}
+
+.header { margin-bottom: 4rem; }
+
+.sectionLabel {
+  display: block;
+  font-family: var(--font-mono);
+  font-size: 0.8rem;
+  color: var(--electric);
+  letter-spacing: 0.1em;
+  margin-bottom: 1.5rem;
+}
+
+.headline {
+  font-size: clamp(2.5rem, 5vw, 5rem);
+  font-weight: 800;
+  letter-spacing: -0.04em;
+  line-height: 1.05;
+  color: var(--cream);
+}
+
+.accent { color: var(--butter); }
+
+/* Tabs */
+.tabs {
+  display: flex;
+  gap: 0.25rem;
+  margin-bottom: 3rem;
+  border-bottom: 1px solid rgba(48, 113, 247, 0.1);
+  padding-bottom: 0;
+  flex-wrap: wrap;
+}
+
+.tab {
+  position: relative;
+  padding: 0.65rem 1.2rem;
+  font-size: 0.85rem;
+  font-weight: 600;
+  color: var(--ice-dim);
+  background: none;
+  border: none;
+  border-radius: var(--radius-sm) var(--radius-sm) 0 0;
+  transition: color 0.2s;
+  letter-spacing: 0.02em;
+}
+.tab:hover { color: var(--cream); }
+.tabActive { color: var(--cream); }
+
+.tabIndicator {
+  position: absolute;
+  bottom: -1px;
+  left: 0;
+  right: 0;
+  height: 2px;
+  background: var(--electric);
+  border-radius: 2px 2px 0 0;
+}
+
+/* Grid */
+.grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(150px, 1fr));
+  gap: 1rem;
+}
+
+.techCard {
+  background: rgba(15, 36, 96, 0.3);
+  border: 1px solid rgba(48, 113, 247, 0.08);
+  border-radius: var(--radius-md);
+  padding: 1.5rem 1rem;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 0.75rem;
+  transition: border-color 0.25s, transform 0.25s, background 0.25s;
+}
+.techCard:hover {
+  border-color: rgba(48, 113, 247, 0.3);
+  transform: translateY(-4px);
+  background: rgba(15, 36, 96, 0.5);
+}
+
+.techIcon {
+  font-size: 1.8rem;
+  line-height: 1;
+}
+
+.techName {
+  font-size: 0.78rem;
+  font-weight: 600;
+  color: var(--ice-dim);
+  text-align: center;
+  letter-spacing: 0.02em;
+}

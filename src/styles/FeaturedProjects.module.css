@@ -1,0 +1,628 @@
+.section {
+  background: var(--cream-off);
+  padding: 5rem 0 6rem;
+}
+
+.inner {
+  max-width: 1280px;
+  margin: 0 auto;
+  padding: 0 2.5rem;
+  display: flex;
+  flex-direction: column;
+  gap: 2rem;
+}
+
+.sectionHeader { margin-bottom: 1.5rem; }
+
+.sectionLabel {
+  display: block;
+  font-family: var(--font-mono);
+  font-size: 0.72rem;
+  color: rgba(11, 29, 81, 0.35);
+  letter-spacing: 0.12em;
+  margin-bottom: 0.75rem;
+}
+
+.headline {
+  font-size: clamp(2.5rem, 5vw, 4.5rem);
+  font-weight: 700;
+  letter-spacing: -0.04em;
+  color: var(--midnight);
+  line-height: 1.05;
+}
+
+.accent { color: var(--electric); }
+
+/* Shared tag */
+.tag {
+  font-family: var(--font-mono);
+  font-size: 0.65rem;
+  padding: 0.22rem 0.65rem;
+  border-radius: var(--radius-full);
+  color: rgba(11, 29, 81, 0.4);
+  border: 1px solid rgba(11, 29, 81, 0.1);
+}
+
+/* ============================
+   CREATORS BLUEPRINT FLAGSHIP
+   ============================ */
+.flagshipCard {
+  background: var(--midnight);
+  border-radius: var(--radius-xl);
+  padding: 3rem;
+  display: flex;
+  flex-direction: column;
+  gap: 2rem;
+  border: 1px solid rgba(48, 113, 247, 0.15);
+  transition: transform 0.3s var(--ease-out);
+}
+.flagshipCard:hover { transform: translateY(-3px); }
+
+.flagshipHeader {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  flex-wrap: wrap;
+  gap: 1rem;
+}
+
+.flagshipMeta {
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+}
+
+.flagshipNum {
+  font-family: var(--font-mono);
+  font-size: 0.68rem;
+  color: rgba(191, 199, 255, 0.2);
+  letter-spacing: 0.1em;
+}
+
+.flagshipBadge {
+  font-family: var(--font-mono);
+  font-size: 0.65rem;
+  font-weight: 600;
+  letter-spacing: 0.1em;
+  text-transform: uppercase;
+  color: var(--electric);
+  background: rgba(48, 113, 247, 0.1);
+  border: 1px solid rgba(48, 113, 247, 0.25);
+  border-radius: var(--radius-full);
+  padding: 0.3rem 0.75rem;
+}
+
+.flagshipStatus {
+  font-family: var(--font-mono);
+  font-size: 0.65rem;
+  color: #4ade80;
+  margin-left: 0.5rem;
+  letter-spacing: 0.06em;
+}
+
+.flagshipLink {
+  font-family: var(--font-mono);
+  font-size: 0.72rem;
+  font-weight: 600;
+  color: var(--ice);
+  opacity: 0.5;
+  transition: opacity 0.2s;
+}
+.flagshipLink:hover { opacity: 1; }
+
+/* Title */
+.flagshipTitle { display: flex; flex-direction: column; gap: 0.4rem; }
+
+.flagshipName {
+  font-size: clamp(2rem, 4vw, 3.5rem);
+  font-weight: 700;
+  letter-spacing: -0.04em;
+  color: var(--cream);
+  line-height: 1.05;
+}
+
+.flagshipTagline {
+  font-size: 0.9rem;
+  color: var(--electric);
+  font-family: var(--font-mono);
+  letter-spacing: 0.02em;
+}
+
+/* Description */
+.flagshipDesc {
+  font-size: 0.95rem;
+  line-height: 1.75;
+  color: rgba(191, 199, 255, 0.5);
+  max-width: 800px;
+  font-weight: 400;
+}
+
+/* Device mockups */
+.devicesWrap {
+  position: relative;
+  width: 100%;
+  margin-top: 2rem;
+  display: flex;
+  justify-content: center;
+  align-items: flex-end;
+  transform: translate(-6%, -40px);
+}
+
+.laptopMockup {
+  position: relative;
+  width: 100%;
+  max-width: 850px;
+  z-index: 1;
+}
+
+.laptopScreen {
+  background: #111;
+  border-radius: 16px 16px 0 0;
+  padding: 3% 3% 4%;
+  box-shadow: 0 20px 60px rgba(0,0,0,0.5);
+  border: 1px solid rgba(255, 255, 255, 0.1);
+  border-bottom: none;
+}
+
+.laptopDisplay {
+  background: #000;
+  border-radius: 6px;
+  position: relative;
+  aspect-ratio: 16/10;
+  overflow: hidden;
+}
+
+.laptopBase {
+  position: relative;
+  background: #2a2a2a;
+  height: 16px;
+  border-radius: 0 0 24px 24px;
+  width: 112%;
+  left: -6%;
+  box-shadow: inset 0 -3px 8px rgba(0,0,0,0.6);
+  border-top: 1px solid rgba(255, 255, 255, 0.2);
+}
+
+.laptopIndent {
+  position: absolute;
+  top: 0;
+  left: 50%;
+  transform: translateX(-50%);
+  width: 140px;
+  height: 5px;
+  background: #111;
+  border-radius: 0 0 6px 6px;
+}
+
+.mobileMockup {
+  position: absolute;
+  right: -2%;
+  bottom: -8%;
+  width: 25%;
+  min-width: 160px;
+  max-width: 260px;
+  aspect-ratio: 9/19.5;
+  background: #000;
+  border-radius: 30px;
+  box-shadow: 0 0 0 8px #1a1a1a, 0 30px 60px rgba(0,0,0,0.6);
+  z-index: 2;
+  overflow: hidden;
+  border: 1px solid rgba(255, 255, 255, 0.1);
+}
+
+.deviceImg {
+  object-fit: contain;
+  object-position: top center;
+}
+
+/* Features grid */
+.featuresGrid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 1.25rem;
+}
+
+.featureItem {
+  display: flex;
+  align-items: flex-start;
+  gap: 0.75rem;
+}
+
+.featureIcon {
+  font-size: 1rem;
+  color: var(--electric);
+  flex-shrink: 0;
+  margin-top: 0.05rem;
+  opacity: 0.8;
+}
+
+.featureLabel {
+  display: block;
+  font-size: 0.82rem;
+  font-weight: 700;
+  color: var(--cream);
+  margin-bottom: 0.2rem;
+  letter-spacing: -0.01em;
+}
+
+.featureDesc {
+  font-size: 0.78rem;
+  color: rgba(191, 199, 255, 0.4);
+  line-height: 1.5;
+}
+
+/* Flagship tags */
+.flagshipTags {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.4rem;
+}
+.flagshipTags .tag {
+  color: rgba(191, 199, 255, 0.35);
+  border-color: rgba(191, 199, 255, 0.1);
+}
+
+/* ============================
+   PARKFLOW CASE STUDY
+   ============================ */
+.caseStudy {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 4rem;
+  background: #fff;
+  border-radius: var(--radius-xl);
+  padding: 3rem;
+  border: 1px solid rgba(11, 29, 81, 0.06);
+  align-items: start;
+  transition: transform 0.3s var(--ease-out);
+}
+.caseStudy:hover { transform: translateY(-2px); }
+
+/* LEFT COLUMN */
+.caseStudyLeft { min-width: 0; }
+
+.caseStudyHeader {
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+  margin-bottom: 1.5rem;
+}
+
+.caseNum {
+  font-family: var(--font-mono);
+  font-size: 0.68rem;
+  color: rgba(11, 29, 81, 0.18);
+  letter-spacing: 0.1em;
+}
+
+.caseBadgeRow { display: flex; align-items: center; gap: 0.5rem; }
+
+.undergrad {
+  font-family: var(--font-mono);
+  font-size: 0.62rem;
+  font-weight: 600;
+  letter-spacing: 0.1em;
+  text-transform: uppercase;
+  color: var(--butter);
+  background: rgba(255, 217, 102, 0.1);
+  border: 1px solid rgba(255, 217, 102, 0.25);
+  border-radius: var(--radius-full);
+  padding: 0.3rem 0.75rem;
+}
+
+.caseTitle {
+  font-size: clamp(2rem, 4vw, 3.2rem);
+  font-weight: 700;
+  letter-spacing: -0.04em;
+  color: var(--midnight);
+  margin-bottom: 0.3rem;
+  line-height: 1.05;
+}
+
+.caseTagline {
+  font-family: var(--font-mono);
+  font-size: 0.75rem;
+  color: var(--electric);
+  letter-spacing: 0.06em;
+  text-transform: uppercase;
+  margin-bottom: 1.5rem;
+}
+
+/* Role badges */
+.roleBadges {
+  display: flex;
+  gap: 0.6rem;
+  flex-wrap: wrap;
+  margin-bottom: 2rem;
+}
+
+.roleBadge {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.4rem;
+  font-size: 0.8rem;
+  font-weight: 600;
+  color: var(--midnight);
+  background: var(--cream-off);
+  border: 1px solid rgba(11, 29, 81, 0.1);
+  border-radius: var(--radius-full);
+  padding: 0.4rem 0.9rem;
+}
+
+.roleIcon { font-size: 0.75rem; color: var(--electric); }
+
+/* Case sections */
+.caseSection { margin-bottom: 1.5rem; }
+
+.caseSectionLabel {
+  display: block;
+  font-family: var(--font-mono);
+  font-size: 0.62rem;
+  font-weight: 600;
+  letter-spacing: 0.12em;
+  text-transform: uppercase;
+  color: rgba(11, 29, 81, 0.3);
+  margin-bottom: 0.5rem;
+}
+
+.caseSectionText {
+  font-size: 0.88rem;
+  line-height: 1.7;
+  color: rgba(11, 29, 81, 0.55);
+}
+
+/* Case tags */
+.caseTags {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.4rem;
+}
+
+.caseTag {
+  font-family: var(--font-mono);
+  font-size: 0.65rem;
+  padding: 0.25rem 0.65rem;
+  border-radius: var(--radius-full);
+  color: var(--electric);
+  border: 1px solid rgba(48, 113, 247, 0.2);
+  background: rgba(48, 113, 247, 0.05);
+}
+
+/* Highlights list */
+.highlightList {
+  display: flex;
+  flex-direction: column;
+  gap: 0.5rem;
+}
+
+.highlightItem {
+  display: flex;
+  align-items: center;
+  gap: 0.6rem;
+  font-size: 0.85rem;
+  color: rgba(11, 29, 81, 0.6);
+  line-height: 1.4;
+}
+
+.highlightDot {
+  width: 5px;
+  height: 5px;
+  border-radius: 50%;
+  background: var(--electric);
+  flex-shrink: 0;
+  opacity: 0.6;
+}
+
+/* RIGHT COLUMN — mockups */
+.caseStudyRight {
+  display: flex;
+  flex-direction: column;
+  gap: 1.5rem;
+}
+
+.mockupGroup {
+  display: flex;
+  flex-direction: column;
+  gap: 0.75rem;
+}
+
+.mockupGroupHeader {
+  display: flex;
+  align-items: center;
+  gap: 0.75rem;
+}
+
+.mockupPhase {
+  font-family: var(--font-mono);
+  font-size: 0.62rem;
+  font-weight: 700;
+  letter-spacing: 0.12em;
+  text-transform: uppercase;
+  color: var(--electric);
+  background: rgba(48, 113, 247, 0.08);
+  border: 1px solid rgba(48, 113, 247, 0.15);
+  border-radius: var(--radius-full);
+  padding: 0.25rem 0.65rem;
+}
+
+.mockupPhaseTitle {
+  font-size: 0.88rem;
+  font-weight: 700;
+  color: var(--midnight);
+  letter-spacing: -0.01em;
+}
+
+.mockupGroupDesc {
+  font-size: 0.78rem;
+  color: rgba(11, 29, 81, 0.4);
+  line-height: 1.6;
+}
+
+.mockupImg {
+  display: flex;
+  justify-content: center;
+  padding: 1.5rem 0;
+}
+
+.iphoneFrame {
+  position: relative;
+  width: 100%;
+  max-width: 250px;
+  aspect-ratio: 9/19.5;
+  background: #000;
+  border-radius: 36px;
+  box-shadow: 0 0 0 10px #1a1a1a, 0 20px 40px rgba(0,0,0,0.2);
+  overflow: hidden;
+}
+
+.iphoneNotch {
+  position: absolute;
+  top: 0;
+  left: 50%;
+  transform: translateX(-50%);
+  width: 45%;
+  height: 24px;
+  background: #1a1a1a;
+  border-bottom-left-radius: 14px;
+  border-bottom-right-radius: 14px;
+  z-index: 10;
+}
+
+.iphoneScreen {
+  width: 100%;
+  height: 100%;
+  position: relative;
+  background: #fff;
+  overflow: hidden;
+}
+
+.stackedContainer {
+  position: relative;
+  width: 100%;
+  max-width: 250px;
+  height: 500px;
+  display: flex;
+  justify-content: center;
+}
+
+.stackedFrame {
+  position: absolute;
+  top: 0;
+  width: 100%;
+  aspect-ratio: 9/19.5;
+  background: #000;
+  border-radius: 36px;
+  box-shadow: 0 0 0 10px #1a1a1a, 0 20px 40px rgba(0,0,0,0.2);
+  overflow: hidden;
+  transform-origin: top center;
+}
+
+.iphoneImg {
+  object-fit: cover;
+  object-position: top center;
+}
+
+/* Phase divider */
+.phaseDivider {
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+}
+
+.phaseDividerLine {
+  flex: 1;
+  height: 1px;
+  background: rgba(11, 29, 81, 0.08);
+}
+
+.phaseDividerLabel {
+  font-family: var(--font-mono);
+  font-size: 0.6rem;
+  color: rgba(11, 29, 81, 0.25);
+  letter-spacing: 0.1em;
+  white-space: nowrap;
+}
+
+/* ============================
+   RESEARCH CARD
+   ============================ */
+.researchCard {
+  background: var(--midnight-deep);
+  border-radius: var(--radius-xl);
+  padding: 2.5rem;
+  display: flex;
+  flex-direction: column;
+  gap: 1.25rem;
+  border: 1px solid rgba(48, 113, 247, 0.1);
+  transition: transform 0.25s var(--ease-out);
+}
+.researchCard:hover { transform: translateY(-2px); }
+
+.researchMeta {
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+}
+
+.researchNum {
+  font-family: var(--font-mono);
+  font-size: 0.68rem;
+  color: rgba(191, 199, 255, 0.18);
+  letter-spacing: 0.1em;
+}
+
+.researchBadge {
+  font-family: var(--font-mono);
+  font-size: 0.62rem;
+  font-weight: 600;
+  letter-spacing: 0.1em;
+  text-transform: uppercase;
+  color: rgba(191, 199, 255, 0.4);
+  border: 1px solid rgba(191, 199, 255, 0.12);
+  border-radius: var(--radius-full);
+  padding: 0.25rem 0.65rem;
+}
+
+.researchTitle {
+  font-size: clamp(1.4rem, 2.5vw, 2.2rem);
+  font-weight: 700;
+  letter-spacing: -0.03em;
+  color: var(--cream);
+  line-height: 1.1;
+}
+
+.researchDesc {
+  font-size: 0.95rem;
+  line-height: 1.75;
+  color: rgba(191, 199, 255, 0.85);
+  max-width: 760px;
+}
+
+.researchTags {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.4rem;
+}
+.researchTags .tag {
+  color: rgba(191, 199, 255, 0.35);
+  border-color: rgba(191, 199, 255, 0.1);
+}
+
+/* ============================
+   RESPONSIVE
+   ============================ */
+@media (max-width: 1024px) {
+  .featuresGrid { grid-template-columns: 1fr 1fr; }
+  .caseStudy { grid-template-columns: 1fr; gap: 2.5rem; }
+}
+
+@media (max-width: 768px) {
+  .flagshipCard, .caseStudy, .researchCard { padding: 2rem; }
+  .featuresGrid { grid-template-columns: 1fr; }
+  .mobileMockup {
+    display: none;
+  }
+  .stackedContainer {
+    height: 560px;
+  }
+}

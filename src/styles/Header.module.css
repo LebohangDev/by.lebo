@@ -1,0 +1,106 @@
+.header {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  z-index: var(--z-nav);
+  padding: 1.2rem 2rem;
+  transition: background 0.4s, backdrop-filter 0.4s, padding 0.3s;
+}
+
+/* Starts transparent (on blue hero) → goes frosted on scroll */
+.scrolled {
+  background: rgba(11, 29, 81, 0.88);
+  backdrop-filter: blur(20px);
+  -webkit-backdrop-filter: blur(20px);
+  border-bottom: 1px solid rgba(255,255,255,0.06);
+  padding: 0.8rem 2rem;
+}
+
+.inner {
+  max-width: 1400px;
+  margin: 0 auto;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.logo {
+  font-size: 1rem;
+  font-weight: 700;
+  letter-spacing: -0.02em;
+  color: #fff;
+  display: flex;
+  align-items: center;
+  gap: 0.2rem;
+}
+
+.logoStar {
+  color: var(--butter);
+  font-size: 0.75rem;
+  margin-left: 0.1rem;
+}
+
+.nav {
+  display: flex;
+  align-items: center;
+  gap: 2rem;
+}
+
+.navLink {
+  font-size: 0.82rem;
+  font-weight: 500;
+  color: rgba(255,255,255,0.6);
+  letter-spacing: 0.02em;
+  transition: color 0.2s;
+}
+.navLink:hover { color: #fff; }
+
+.navCta {
+  font-size: 0.82rem;
+  font-weight: 600;
+  color: #fff;
+  background: rgba(255,255,255,0.12);
+  border: 1px solid rgba(255,255,255,0.2);
+  border-radius: var(--radius-full);
+  padding: 0.45rem 1rem;
+  transition: background 0.2s, border-color 0.2s;
+}
+.navCta:hover { background: rgba(255,255,255,0.2); }
+
+.menuBtn {
+  display: none;
+  flex-direction: column;
+  gap: 5px;
+  width: 26px;
+  padding: 3px;
+}
+.menuBtn span {
+  display: block;
+  height: 1.5px;
+  background: #fff;
+  border-radius: 1px;
+  transition: transform 0.3s, opacity 0.3s;
+  transform-origin: center;
+}
+.menuBtnActive span:nth-child(1) { transform: translateY(6.5px) rotate(45deg); }
+.menuBtnActive span:nth-child(2) { opacity: 0; }
+.menuBtnActive span:nth-child(3) { transform: translateY(-6.5px) rotate(-45deg); }
+
+@media (max-width: 768px) {
+  .menuBtn { display: flex; }
+  .nav {
+    position: fixed;
+    inset: 0;
+    background: var(--midnight-deep);
+    flex-direction: column;
+    justify-content: center;
+    gap: 2rem;
+    transform: translateX(100%);
+    transition: transform 0.4s var(--ease-out);
+    z-index: calc(var(--z-nav) - 1);
+  }
+  .navOpen { transform: translateX(0); }
+  .navLink { font-size: 1.3rem; font-weight: 700; color: #fff; }
+  .navCta { font-size: 1rem; }
+}

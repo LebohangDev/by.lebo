@@ -1,0 +1,109 @@
+.section {
+  background: var(--midnight-deep);
+  padding: var(--space-2xl) 0 var(--space-xl);
+  position: relative;
+  overflow: hidden;
+}
+
+/* Subtle radial accent */
+.section::before {
+  content: '';
+  position: absolute;
+  bottom: 0;
+  right: 0;
+  width: 50%;
+  height: 50%;
+  background: radial-gradient(ellipse at bottom right, rgba(48, 113, 247, 0.06) 0%, transparent 70%);
+  pointer-events: none;
+}
+
+.inner {
+  position: relative;
+  max-width: 900px;
+  margin: 0 auto;
+  padding: 0 2rem;
+}
+
+.sectionLabel {
+  display: block;
+  font-family: var(--font-mono);
+  font-size: 0.8rem;
+  color: var(--electric);
+  letter-spacing: 0.1em;
+  margin-bottom: 2rem;
+}
+
+.headline {
+  font-size: clamp(3rem, 8vw, 7rem);
+  font-weight: 800;
+  letter-spacing: -0.04em;
+  line-height: 1.05;
+  color: var(--cream);
+  margin-bottom: 1.5rem;
+}
+
+.accent { color: var(--butter); }
+
+.sub {
+  font-size: 1.05rem;
+  color: var(--ice-dim);
+  font-weight: 300;
+  line-height: 1.7;
+  max-width: 500px;
+  margin-bottom: 3rem;
+}
+
+.mainCta {
+  font-size: 1rem !important;
+  padding: 1rem 2.5rem !important;
+  margin-bottom: 4rem;
+}
+
+/* Social links */
+.links {
+  display: flex;
+  gap: 1rem;
+  margin-bottom: 6rem;
+  flex-wrap: wrap;
+}
+
+.link {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+  padding: 0.75rem 1.25rem;
+  border: 1px solid rgba(191, 199, 255, 0.12);
+  border-radius: var(--radius-md);
+  color: var(--ice-dim);
+  font-size: 0.85rem;
+  font-weight: 500;
+  transition: border-color 0.2s, color 0.2s;
+}
+.link:hover {
+  border-color: rgba(48, 113, 247, 0.4);
+  color: var(--cream);
+}
+
+.linkIcon { color: inherit; display: flex; }
+.linkLabel { color: inherit; }
+
+/* Footer strip */
+.footer {
+  border-top: 1px solid rgba(48, 113, 247, 0.08);
+  padding-top: 2rem;
+  display: flex;
+  justify-content: space-between;
+  flex-wrap: wrap;
+  gap: 1rem;
+}
+
+.footerText {
+  font-family: var(--font-mono);
+  font-size: 0.72rem;
+  color: rgba(191, 199, 255, 0.25);
+  letter-spacing: 0.06em;
+}
+
+@media (max-width: 480px) {
+  .footer { flex-direction: column; gap: 0.5rem; }
+}

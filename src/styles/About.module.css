@@ -1,0 +1,121 @@
+.about {
+  background: var(--midnight);
+  padding: var(--space-2xl) 0;
+  overflow: hidden;
+}
+
+.inner {
+  max-width: 1280px;
+  margin: 0 auto;
+  padding: 0 2rem;
+}
+
+.labelRow { margin-bottom: 4rem; }
+
+.sectionLabel {
+  font-family: var(--font-mono);
+  font-size: 0.8rem;
+  color: var(--electric);
+  letter-spacing: 0.1em;
+  text-transform: uppercase;
+}
+
+/* Editorial split */
+.split {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 6rem;
+  margin-bottom: 8rem;
+  align-items: start;
+}
+
+.leftCol, .rightCol { min-width: 0; }
+
+.headline {
+  font-size: clamp(3rem, 6vw, 5.5rem);
+  font-weight: 800;
+  letter-spacing: -0.04em;
+  line-height: 1.05;
+  color: var(--cream);
+  margin-bottom: 3rem;
+}
+
+.accentWord {
+  color: var(--butter);
+}
+
+/* Stats grid */
+.statsGrid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 1rem;
+}
+
+.statCard {
+  background: rgba(15, 36, 96, 0.4);
+  border: 1px solid rgba(48, 113, 247, 0.1);
+  border-radius: var(--radius-md);
+  padding: 1.5rem;
+  display: flex;
+  flex-direction: column;
+  gap: 0.3rem;
+}
+
+.statValue {
+  font-size: 2rem;
+  font-weight: 800;
+  letter-spacing: -0.03em;
+  background: linear-gradient(135deg, var(--electric), var(--ice));
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+}
+
+.statLabel {
+  font-size: 0.75rem;
+  color: var(--ice-dim);
+  font-weight: 500;
+  letter-spacing: 0.05em;
+  text-transform: uppercase;
+}
+
+/* Story text */
+.storyText {
+  font-size: 1.05rem;
+  line-height: 1.8;
+  color: var(--cream-dim);
+  margin-bottom: 1.3rem;
+  font-weight: 300;
+}
+
+.storyText strong {
+  color: var(--cream);
+  font-weight: 700;
+}
+
+/* Timeline */
+.timelineSection {
+  border-top: 1px solid rgba(48, 113, 247, 0.08);
+  padding-top: 4rem;
+}
+
+.timelineHeading {
+  font-size: 1.5rem;
+  font-weight: 700;
+  color: var(--ice);
+  margin-bottom: 3rem;
+  letter-spacing: -0.02em;
+}
+
+@media (max-width: 900px) {
+  .split {
+    grid-template-columns: 1fr;
+    gap: 3rem;
+    margin-bottom: 5rem;
+  }
+  .headline { margin-bottom: 2rem; }
+}
+
+@media (max-width: 480px) {
+  .statsGrid { grid-template-columns: 1fr 1fr; }
+}

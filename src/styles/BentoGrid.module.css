@@ -1,0 +1,565 @@
+.section {
+  background: var(--cream-off);
+  padding: 3rem 0 4rem;
+}
+
+.inner {
+  max-width: 1400px;
+  margin: 0 auto;
+  padding: 0 1.5rem;
+  display: flex;
+  flex-direction: column;
+  gap: 1.2rem;
+}
+
+/* Shared label */
+.cardLabel {
+  font-family: var(--font-mono);
+  font-size: 0.62rem;
+  font-weight: 500;
+  letter-spacing: 0.14em;
+  text-transform: uppercase;
+  color: rgba(11, 29, 81, 0.35);
+  display: block;
+  margin-bottom: 0.75rem;
+}
+
+/* ============================
+   ROW 1: 3 cards
+   ============================ */
+.row1 {
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr;
+  gap: 1.2rem;
+  align-items: stretch;
+}
+
+/* Manifesto card (Blue Lock energy) */
+.manifestoCard {
+  background: #050810;
+  border-radius: var(--radius-xl);
+  padding: 2.5rem;
+  position: relative;
+  overflow: hidden;
+  min-height: 320px;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  box-shadow: inset 0 0 100px rgba(48, 113, 247, 0.15);
+}
+
+.manifestoCard::before {
+  content: '';
+  position: absolute;
+  top: -20%;
+  right: -20%;
+  width: 150%;
+  height: 150%;
+  background: radial-gradient(circle at 70% 30%, rgba(48, 113, 247, 0.2) 0%, transparent 50%);
+  pointer-events: none;
+}
+
+.manifestoCard .cardLabel { color: rgba(191, 199, 255, 0.4); }
+
+.manifestoLines {
+  display: flex;
+  flex-direction: column;
+  gap: 0;
+}
+.manifestoLines span {
+  font-size: clamp(1.8rem, 3vw, 2.8rem);
+  font-weight: 700;
+  color: var(--cream);
+  letter-spacing: -0.04em;
+  line-height: 1.1;
+}
+
+.globeSmall {
+  color: rgba(191, 199, 255, 0.15);
+  position: absolute;
+  bottom: 2rem;
+  right: 2rem;
+}
+
+/* Photo card */
+.photoCard {
+  background: #e8eaf0;
+  border-radius: var(--radius-xl);
+  overflow: hidden;
+  display: flex;
+  flex-direction: column;
+  min-height: 320px;
+}
+
+.photoInner {
+  flex: 1;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.photoPlaceholder {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 0.5rem;
+}
+.photoPlaceholder span:first-child { font-size: 3rem; }
+
+.photoHint {
+  font-size: 0.72rem;
+  color: rgba(11, 29, 81, 0.3);
+  font-family: var(--font-mono);
+  letter-spacing: 0.08em;
+}
+
+.photoCaption {
+  padding: 1rem 1.5rem;
+  background: rgba(0, 0, 0, 0.04);
+  border-top: 1px solid rgba(11, 29, 81, 0.06);
+}
+
+.photoCaptionChip {
+  font-size: 0.75rem;
+  font-weight: 600;
+  color: rgba(11, 29, 81, 0.5);
+  font-family: var(--font-mono);
+}
+
+/* Quote card (Pinterest bent aesthetic) */
+.quoteCard {
+  background: #fff;
+  border-radius: var(--radius-xl);
+  padding: 2.5rem;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  gap: 0;
+  position: relative;
+  overflow: visible;
+  min-height: 320px;
+  border: 1px solid rgba(11, 29, 81, 0.06);
+  transform: rotate(3deg) scale(1.02);
+  box-shadow: 0 30px 60px rgba(11, 29, 81, 0.08);
+  z-index: 5;
+}
+
+.quoteCard::before {
+  content: '';
+  position: absolute;
+  top: -12px;
+  left: 50%;
+  transform: translateX(-50%) rotate(-2deg);
+  width: 80px;
+  height: 24px;
+  background: rgba(255, 255, 255, 0.8);
+  backdrop-filter: blur(4px);
+  border: 1px solid rgba(0,0,0,0.05);
+  box-shadow: 0 2px 10px rgba(0,0,0,0.05);
+  z-index: 10;
+}
+
+.quoteIcon {
+  font-family: Georgia, serif;
+  font-size: 4rem;
+  color: var(--electric);
+  line-height: 1;
+  margin-bottom: 0.5rem;
+  display: block;
+}
+
+.quoteText {
+  font-size: clamp(1.6rem, 3vw, 2.4rem);
+  font-weight: 700;
+  color: var(--midnight);
+  letter-spacing: -0.04em;
+  line-height: 1.1;
+  margin-bottom: 1.2rem;
+}
+
+.quoteAccent { color: var(--electric); }
+
+.quoteRule {
+  width: 32px;
+  height: 2px;
+  background: var(--electric);
+  margin-bottom: 0.75rem;
+  border-radius: 1px;
+}
+
+.quoteSub {
+  font-size: 0.82rem;
+  color: rgba(11, 29, 81, 0.4);
+  font-style: italic;
+}
+
+.quoteGlobe {
+  position: absolute;
+  bottom: 1.5rem;
+  right: 1.5rem;
+  color: rgba(11, 29, 81, 0.08);
+}
+
+/* ============================
+   ROW 2: 6 equal cards
+   ============================ */
+.row2 {
+  display: grid;
+  grid-template-columns: repeat(5, 1fr);
+  gap: 1.2rem;
+  align-items: stretch;
+}
+
+/* Cloud architecture (dark navy, spans 1) */
+.cloudCard {
+  background: var(--midnight);
+  border-radius: var(--radius-xl);
+  padding: 1.5rem;
+  min-height: 220px;
+  display: flex;
+  flex-direction: column;
+}
+.cloudCard .cardLabel { color: rgba(191, 199, 255, 0.35); }
+
+.cloudDiagram {
+  display: flex;
+  flex-direction: column;
+  gap: 0.5rem;
+  flex: 1;
+  justify-content: center;
+}
+
+.cloudNode {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+}
+
+.cloudIcon {
+  font-size: 0.9rem;
+  color: var(--ice);
+  opacity: 0.5;
+}
+
+.cloudNodeLabel {
+  font-family: var(--font-mono);
+  font-size: 0.72rem;
+  color: rgba(191, 199, 255, 0.6);
+}
+
+/* Anime mindset (very dark, dramatic) */
+.animeCard {
+  background: #050810;
+  border-radius: var(--radius-xl);
+  padding: 1.5rem;
+  min-height: 220px;
+  position: relative;
+  overflow: hidden;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-end;
+}
+
+.animeBg {
+  position: absolute;
+  inset: 0;
+  background: linear-gradient(135deg, #0a0f2a 0%, #050810 100%);
+  opacity: 0.9;
+}
+
+.animeContent { position: relative; z-index: 1; }
+
+.animeQuote {
+  font-size: 0.78rem;
+  font-weight: 600;
+  color: rgba(255, 255, 255, 0.5);
+  letter-spacing: 0.04em;
+  text-transform: uppercase;
+  line-height: 1.5;
+  margin-bottom: 0.4rem;
+}
+
+.animeFocus {
+  font-size: 2rem;
+  font-weight: 800;
+  color: var(--electric);
+  letter-spacing: -0.04em;
+  display: block;
+}
+
+/* Terminal card */
+.terminalCard {
+  background: #0d1117;
+  border-radius: var(--radius-xl);
+  padding: 1.2rem 1.5rem;
+  min-height: 220px;
+  display: flex;
+  flex-direction: column;
+  gap: 0.75rem;
+}
+
+.terminalDots {
+  display: flex;
+  gap: 5px;
+}
+.terminalDots span {
+  width: 8px;
+  height: 8px;
+  border-radius: 50%;
+  display: block;
+}
+
+.terminalBody { flex: 1; display: flex; flex-direction: column; gap: 0.3rem; }
+
+.terminalLine {
+  font-family: var(--font-mono);
+  font-size: 0.78rem;
+  color: rgba(255,255,255,0.45);
+  display: flex;
+  gap: 0.4rem;
+}
+
+.terminalString {
+  font-family: var(--font-mono);
+  font-size: 0.78rem;
+  color: #7ec8e3;
+  margin-bottom: 0.4rem;
+}
+
+.terminalSpacer { height: 0.3rem; }
+
+.terminalItem {
+  font-family: var(--font-mono);
+  font-size: 0.75rem;
+  color: rgba(255,255,255,0.5);
+  display: flex;
+  gap: 0.4rem;
+}
+
+.prompt { color: var(--electric); }
+
+.terminalCta {
+  font-family: var(--font-mono);
+  font-size: 0.64rem;
+  font-weight: 700;
+  letter-spacing: 0.06em;
+  background: var(--electric);
+  color: #fff;
+  padding: 0.5rem 0.75rem;
+  border-radius: var(--radius-sm);
+  text-align: center;
+  text-transform: uppercase;
+}
+
+/* Lifestyle card */
+.lifestyleCard {
+  background: var(--cream-off);
+  border: 1px solid rgba(11, 29, 81, 0.07);
+  border-radius: var(--radius-xl);
+  padding: 1.5rem;
+  min-height: 220px;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  position: relative;
+  overflow: hidden;
+}
+
+.lifestyleBg {
+  flex: 1;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.lifestyleEmoji { font-size: 4rem; }
+
+.lifestyleLabel {
+  font-family: var(--font-mono);
+  font-size: 0.62rem;
+  font-weight: 500;
+  letter-spacing: 0.14em;
+  color: rgba(11, 29, 81, 0.3);
+  text-transform: uppercase;
+}
+
+.lifestyleStar {
+  position: absolute;
+  top: 1rem;
+  right: 1rem;
+  color: var(--butter);
+  font-size: 1.1rem;
+}
+
+/* Creators Blueprint progress card */
+.projectCard {
+  background: #fff;
+  border: 1px solid rgba(11, 29, 81, 0.07);
+  border-radius: var(--radius-xl);
+  padding: 1.5rem;
+  min-height: 220px;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+
+.projectName {
+  font-size: 1.3rem;
+  font-weight: 700;
+  color: var(--midnight);
+  letter-spacing: -0.03em;
+  line-height: 1.15;
+  margin-bottom: 0.75rem;
+}
+
+.progressSection { margin-bottom: 0.75rem; }
+
+.progressLabelRow {
+  display: flex;
+  justify-content: space-between;
+  font-family: var(--font-mono);
+  font-size: 0.68rem;
+  color: rgba(11, 29, 81, 0.4);
+  margin-bottom: 0.4rem;
+}
+
+.progressTrack {
+  height: 4px;
+  background: rgba(11, 29, 81, 0.08);
+  border-radius: 2px;
+  overflow: hidden;
+}
+
+.progressFill {
+  height: 100%;
+  background: linear-gradient(90deg, var(--electric), var(--ice));
+  border-radius: 2px;
+}
+
+.projectMilestone {
+  display: flex;
+  flex-direction: column;
+  gap: 0.2rem;
+}
+
+.milestoneLabel {
+  font-family: var(--font-mono);
+  font-size: 0.65rem;
+  color: rgba(11, 29, 81, 0.3);
+  letter-spacing: 0.06em;
+  text-transform: uppercase;
+}
+
+.milestoneValue {
+  font-size: 0.85rem;
+  font-weight: 700;
+  color: var(--electric);
+}
+
+/* Volleyball card */
+.volleyCard {
+  background: var(--midnight-mid);
+  border-radius: var(--radius-xl);
+  min-height: 220px;
+  overflow: hidden;
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-end;
+  padding: 1.5rem;
+}
+
+.volleyBg {
+  position: absolute;
+  inset: 0;
+  overflow: hidden;
+}
+
+.volleyImage {
+  position: absolute;
+  inset: 0;
+  background-size: cover;
+  background-position: center;
+}
+
+.volleyImage1 {
+  background-image: url('/images/volleyball/EB770FD0-6C39-46C8-963C-BCD44075904E.jpeg');
+  animation: fade1 10s infinite;
+}
+
+.volleyImage2 {
+  background-image: url('/images/volleyball/IMG_1033.jpeg');
+  animation: fade2 10s infinite;
+}
+
+@keyframes fade1 {
+  0% { opacity: 1; transform: scale(1); }
+  45% { opacity: 1; transform: scale(1.05); }
+  50% { opacity: 0; transform: scale(1.05); }
+  95% { opacity: 0; transform: scale(1); }
+  100% { opacity: 1; transform: scale(1); }
+}
+
+@keyframes fade2 {
+  0% { opacity: 0; transform: scale(1); }
+  45% { opacity: 0; transform: scale(1); }
+  50% { opacity: 1; transform: scale(1); }
+  95% { opacity: 1; transform: scale(1.05); }
+  100% { opacity: 0; transform: scale(1.05); }
+}
+
+.volleyOverlay {
+  position: absolute;
+  inset: 0;
+  background: linear-gradient(180deg, rgba(48, 113, 247, 0.1) 0%, rgba(7, 16, 46, 0.95) 100%);
+  z-index: 1;
+}
+
+.volleyContent {
+  position: relative;
+  z-index: 1;
+  display: flex;
+  align-items: flex-end;
+  justify-content: space-between;
+}
+
+.volleyNum {
+  font-size: 3.5rem;
+  font-weight: 800;
+  color: rgba(255,255,255,0.15);
+  letter-spacing: -0.05em;
+  line-height: 1;
+}
+
+.volleyMeta {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-end;
+  gap: 0.2rem;
+}
+.volleyCard .cardLabel { color: rgba(191,199,255,0.35); margin-bottom: 0.2rem; }
+
+.volleyRole {
+  font-size: 1.2rem;
+  font-weight: 800;
+  color: var(--butter);
+  letter-spacing: -0.02em;
+}
+
+/* ============================
+   RESPONSIVE
+   ============================ */
+@media (max-width: 1100px) {
+  .row2 { grid-template-columns: repeat(3, 1fr); }
+}
+
+@media (max-width: 768px) {
+  .row1 { grid-template-columns: 1fr 1fr; }
+  .row1 .photoCard { display: none; }
+  .row2 { grid-template-columns: repeat(2, 1fr); }
+}
+
+@media (max-width: 480px) {
+  .row1 { grid-template-columns: 1fr; }
+  .row2 { grid-template-columns: 1fr; }
+}

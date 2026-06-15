@@ -1,0 +1,153 @@
+.section {
+  background: var(--midnight);
+  padding: var(--space-2xl) 0;
+  position: relative;
+  overflow: hidden;
+}
+
+/* Giant bg text */
+.bgText {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  font-size: clamp(8rem, 18vw, 20rem);
+  font-weight: 900;
+  letter-spacing: -0.05em;
+  color: rgba(48, 113, 247, 0.03);
+  pointer-events: none;
+  user-select: none;
+  white-space: nowrap;
+  z-index: 0;
+}
+
+.inner {
+  position: relative;
+  z-index: 1;
+  max-width: 1280px;
+  margin: 0 auto;
+  padding: 0 2rem;
+}
+
+.sectionLabel {
+  display: block;
+  font-family: var(--font-mono);
+  font-size: 0.8rem;
+  color: var(--butter);
+  letter-spacing: 0.1em;
+  margin-bottom: 3rem;
+}
+
+/* Split layout */
+.split {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 6rem;
+  margin-bottom: 5rem;
+  align-items: start;
+}
+
+.leftCol { min-width: 0; }
+
+.captainBadge {
+  width: 64px;
+  height: 64px;
+  border-radius: 50%;
+  background: var(--butter);
+  color: var(--midnight);
+  font-size: 1.8rem;
+  font-weight: 900;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-bottom: 2rem;
+  box-shadow: 0 0 30px rgba(255, 217, 102, 0.3);
+}
+
+.headline {
+  font-size: clamp(2.5rem, 5vw, 5rem);
+  font-weight: 800;
+  letter-spacing: -0.04em;
+  line-height: 1.1;
+  color: var(--cream);
+  margin-bottom: 2rem;
+}
+
+.accent { color: var(--butter); }
+
+.body {
+  font-size: 1rem;
+  color: var(--cream-dim);
+  line-height: 1.8;
+  font-weight: 300;
+  margin-bottom: 1.2rem;
+}
+.body strong { color: var(--cream); font-weight: 700; }
+
+/* Trait cards */
+.traits {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 1rem;
+}
+
+.traitCard {
+  background: rgba(15, 36, 96, 0.35);
+  border: 1px solid rgba(255, 217, 102, 0.1);
+  border-radius: var(--radius-md);
+  padding: 1.5rem;
+  display: flex;
+  flex-direction: column;
+  gap: 0.5rem;
+  transition: border-color 0.3s, transform 0.3s;
+}
+.traitCard:hover {
+  border-color: rgba(255, 217, 102, 0.3);
+  transform: translateY(-3px);
+}
+
+.traitIcon {
+  font-size: 1.4rem;
+  color: var(--butter);
+}
+
+.traitLabel {
+  font-size: 1.1rem;
+  font-weight: 700;
+  color: var(--cream);
+  letter-spacing: -0.01em;
+}
+
+.traitDesc {
+  font-size: 0.85rem;
+  color: var(--ice-dim);
+  line-height: 1.6;
+}
+
+/* Quote strip */
+.quoteStrip {
+  border-top: 1px solid rgba(255, 217, 102, 0.12);
+  border-bottom: 1px solid rgba(255, 217, 102, 0.12);
+  padding: 2rem 0;
+  text-align: center;
+}
+
+.quoteText {
+  font-size: clamp(1rem, 2.5vw, 1.5rem);
+  font-style: italic;
+  color: var(--butter);
+  font-weight: 300;
+  letter-spacing: 0.01em;
+}
+
+@media (max-width: 900px) {
+  .split {
+    grid-template-columns: 1fr;
+    gap: 3rem;
+  }
+  .traits { grid-template-columns: 1fr 1fr; }
+}
+
+@media (max-width: 480px) {
+  .traits { grid-template-columns: 1fr; }
+}

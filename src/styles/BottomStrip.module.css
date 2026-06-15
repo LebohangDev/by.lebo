@@ -1,0 +1,236 @@
+.section {
+  background: var(--midnight);
+  border-top: 1px solid rgba(255, 255, 255, 0.04);
+}
+
+.inner {
+  max-width: 1400px;
+  margin: 0 auto;
+  padding: 3rem 1.5rem;
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr 1fr 1fr;
+  gap: 1.5rem;
+  align-items: start;
+}
+
+/* Shared label */
+.sectionLabel {
+  display: block;
+  font-family: var(--font-mono);
+  font-size: 0.58rem;
+  font-weight: 500;
+  letter-spacing: 0.16em;
+  text-transform: uppercase;
+  color: rgba(191, 199, 255, 0.3);
+  margin-bottom: 1rem;
+}
+
+/* --- Daily Reminder --- */
+.reminder {}
+
+.reminderContent {
+  display: flex;
+  align-items: flex-start;
+  justify-content: space-between;
+  gap: 0.5rem;
+}
+
+.jpBlock {
+  display: flex;
+  flex-direction: column;
+  gap: 0.15rem;
+}
+
+.jpMain {
+  font-family: var(--font-jp);
+  font-size: 1.4rem;
+  color: #fff;
+  font-weight: 300;
+}
+
+.jpSub {
+  font-size: 0.8rem;
+  color: rgba(255,255,255,0.4);
+  font-style: italic;
+}
+
+.reminderStar {
+  color: var(--butter);
+  font-size: 1.2rem;
+  margin-top: 0.3rem;
+  animation: twinkle 3s ease-in-out infinite;
+}
+
+@keyframes twinkle {
+  0%, 100% { opacity: 0.6; transform: scale(1); }
+  50% { opacity: 1; transform: scale(1.15); }
+}
+
+/* --- Now Playing --- */
+.nowPlaying {}
+
+.player {
+  display: flex;
+  gap: 0.75rem;
+  align-items: center;
+  margin-bottom: 0.75rem;
+}
+
+.albumArt {
+  width: 44px;
+  height: 44px;
+  background: rgba(255,255,255,0.06);
+  border-radius: var(--radius-sm);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 1.2rem;
+  flex-shrink: 0;
+}
+
+.trackInfo {
+  display: flex;
+  flex-direction: column;
+  gap: 0.15rem;
+}
+
+.trackName {
+  font-size: 0.85rem;
+  font-weight: 600;
+  color: #fff;
+}
+
+.trackArtist {
+  font-size: 0.72rem;
+  color: rgba(255,255,255,0.4);
+}
+
+/* Music bars */
+.bars {
+  display: flex;
+  gap: 3px;
+  align-items: flex-end;
+  height: 20px;
+}
+
+.bar {
+  display: block;
+  width: 4px;
+  height: var(--h, 50%);
+  background: var(--electric);
+  border-radius: 2px;
+  animation: barBounce 1s ease-in-out infinite;
+  animation-delay: var(--delay, 0s);
+}
+
+@keyframes barBounce {
+  0%, 100% { transform: scaleY(0.4); }
+  50% { transform: scaleY(1); }
+}
+
+/* --- Currently --- */
+.currently {}
+
+.tags {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.4rem;
+}
+
+.tag {
+  display: inline-flex;
+  padding: 0.35rem 0.75rem;
+  border-radius: var(--radius-full);
+  font-size: 0.72rem;
+  font-weight: 500;
+  color: rgba(255,255,255,0.65);
+  border: 1px solid rgba(255,255,255,0.12);
+  transition: border-color 0.2s, color 0.2s;
+}
+.tag:hover { border-color: var(--electric); color: #fff; }
+
+/* --- Goals --- */
+.goals {}
+
+.goalList {
+  display: flex;
+  flex-direction: column;
+  gap: 0.6rem;
+}
+
+.goalItem {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+}
+
+.goalCheck {
+  font-size: 0.65rem;
+  color: var(--electric);
+  opacity: 0.7;
+}
+
+.goalText {
+  font-size: 0.82rem;
+  color: rgba(255,255,255,0.6);
+  font-weight: 400;
+}
+
+/* --- Find Me --- */
+.findMe {
+  position: relative;
+}
+
+.links {
+  display: flex;
+  flex-direction: column;
+  gap: 0.6rem;
+}
+
+.link {
+  display: flex;
+  align-items: center;
+  gap: 0.6rem;
+  transition: opacity 0.2s;
+}
+.link:hover { opacity: 0.75; }
+
+.linkIcon {
+  font-size: 1rem;
+  color: var(--ice);
+  opacity: 0.4;
+  width: 18px;
+  text-align: center;
+}
+
+.linkLabel {
+  display: block;
+  font-size: 0.82rem;
+  font-weight: 600;
+  color: #fff;
+}
+
+.linkSub {
+  display: block;
+  font-size: 0.65rem;
+  color: rgba(255,255,255,0.3);
+  font-family: var(--font-mono);
+  letter-spacing: 0.06em;
+}
+
+.globeWrap {
+  position: absolute;
+  bottom: -0.5rem;
+  right: -0.5rem;
+}
+
+/* Responsive */
+@media (max-width: 1100px) {
+  .inner { grid-template-columns: repeat(3, 1fr); }
+}
+@media (max-width: 700px) {
+  .inner { grid-template-columns: repeat(2, 1fr); gap: 2.5rem; }
+}
+@media (max-width: 400px) {
+  .inner { grid-template-columns: 1fr; }
+}
