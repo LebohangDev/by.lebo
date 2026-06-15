@@ -622,6 +622,9 @@
   .mobileMockup {
     display: none;
   }
+  .devicesWrap {
+    transform: translate(0, 0);
+  }
   .stackedContainer {
     height: 560px;
   }
